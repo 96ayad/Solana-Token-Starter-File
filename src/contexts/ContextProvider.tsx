@@ -42,7 +42,7 @@ import {
   const { networkConfiguration } = useNetworkConfiguration();
   const network = networkConfiguration as WalletAdapterNetwork;
 
-  const originalEndpoint = useMemo(() => clusterApiUrl(network, [network]));
+  const originalEndpoint = useMemo(() => clusterApiUrl(network), [network]);
 
   let endpoint;
 
@@ -82,7 +82,7 @@ import {
   );
  };
 
- export const ConnectionProvider: FC<{ children: ReactNode }> = ({
+ export const ContextProvider: FC<{ children: ReactNode }> = ({
   children,
  }) => {
   return (
