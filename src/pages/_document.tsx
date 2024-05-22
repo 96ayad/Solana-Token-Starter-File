@@ -1,13 +1,30 @@
-import React from 'react';
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
 
-const _document = () => {
-  return (
-    <div>_document</div>
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext){
+    const initialProps = await Document.getInitialProps(ctx);
     
-       <h1>aya ali</h1>
-
-    <div>ayad</div>
-  )
+    return initialProps
+  } 
+  render(){
+    return(
+      <Html>
+        <Head>
+          <link rel="stylesheet" href="/favicon.icon" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
-
-export default _document
+  
+export default MyDocument;
