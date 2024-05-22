@@ -5,7 +5,7 @@ export function grtExplorerUrl(
   viewTypeOrItemAddress: "inspector" | PublicKey | string,
   itemType= "address"
 ) {
-  const grtClusterUrlParam = () => {
+  const getClusterUrlParam = () => {
     let cluster = "";
     if (endpoint === "localnet") {
       cluster = `custom&customUrl=${encodeURIComponent(
