@@ -47,7 +47,7 @@ import {
   let endpoint;
 
   if (network == "mainnet-beta") {
-    endpoint = "URL";
+    endpoint = "https://api.mainnet-beta.solana.com";
   } else if (network == "devnet") {
     endpoint = originalEndpoint;
   } else {
