@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-// import { AppBar } from '../components/AppBar';
+import { AppBar } from '../components/AppBar';
 // import { Footer } from '../components/Footer';
 import Notifications from '../components/Notification';
 import { ContextProvider } from '../contexts/ContextProvider';
@@ -19,7 +19,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <ContextProvider>
         <Notifications />
-        {/* <AppBar /> */}
+        <AppBar />
         <Component {...pageProps} />
         {/* <Footer /> */}
       </ContextProvider>
