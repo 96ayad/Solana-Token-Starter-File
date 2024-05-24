@@ -4,7 +4,7 @@ export { FeatureView } from './feature';
 export { OfferView } from './offer';
 export { FaqView } from './faq';
 export { AirdropView } from './airdrop';
-export { DonsteView } from './donate';
+export { DonateView } from './donate';
 export { CreateView } from './create';
 export { InputView } from './input';
 export { TokenMetata } from './tokenMetadata';
