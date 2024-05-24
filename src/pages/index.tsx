@@ -32,6 +32,7 @@ const Home: NextPage = (props) => {
       </Head>
 
         <HomeView setOpenCreateModal={setOpenCreateModal} />
+        
         <ToolView 
         setOpenAirdrop={setOpenAirdrop}
         setOpenContact={setOpenContact}
@@ -80,6 +81,8 @@ const Home: NextPage = (props) => {
             <DonateView setOpenSendTransaction={setOpenSendTransaction} />
           </div>
         )}
+
+        
     </>
   );
 };
