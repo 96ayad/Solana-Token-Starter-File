@@ -4,15 +4,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import {
-  AirdropView,
-  ContactView,
-  CreateView,
-  DonateView,
-  FaqView,
-  FeatureView,
   HomeView,
-  OfferView,
-  TokenMetata,
   ToolView,
 } from '../views';
 
@@ -40,7 +32,7 @@ const Home: NextPage = (props) => {
         setOpenSendTransaction={setOpenSendTransaction}
         setOpenTokenMetaData={setOpenTokenMetaData}
         />
-
+{/* 
         <FeatureView 
         setOpenAirdrop={setOpenAirdrop}
         setOpenContact={setOpenContact}
@@ -50,9 +42,9 @@ const Home: NextPage = (props) => {
         />
 
         <OfferView />
-        <FaqView />
+        <FaqView /> */}
         {/* //DYNAMIC COMPONENT */}
-        {openCreateModal && (
+        {/* {openCreateModal && (
           <div className='new_loader relative h-full bg-state-900'>
             <CreateView setOpenCreateModal={setOpenCreateModal} />
           </div>
@@ -80,7 +72,7 @@ const Home: NextPage = (props) => {
           <div className='new_loader relative h-full bg-state-900'>
             <DonateView setOpenSendTransaction={setOpenSendTransaction} />
           </div>
-        )}
+        )} */}
 
         
     </>
