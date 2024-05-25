@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import {
+  FaqView,
   FeatureView,
   HomeView,
   OfferView,
@@ -45,7 +46,8 @@ const Home: NextPage = (props) => {
 
         <OfferView />
 
-{/*        <FaqView /> */}
+       <FaqView />
+
         {/* //DYNAMIC COMPONENT */}
         {/* {openCreateModal && (
           <div className='new_loader relative h-full bg-state-900'>
