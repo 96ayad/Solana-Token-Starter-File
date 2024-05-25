@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import {
+  CreateView,
   FaqView,
   FeatureView,
   HomeView,
@@ -49,13 +50,13 @@ const Home: NextPage = (props) => {
        <FaqView />
 
         {/* //DYNAMIC COMPONENT */}
-        {/* {openCreateModal && (
+        {openCreateModal && (
           <div className='new_loader relative h-full bg-state-900'>
             <CreateView setOpenCreateModal={setOpenCreateModal} />
           </div>
         )}
 
-        {openTokenMetaData && (
+        {/* {openTokenMetaData && (
           <div className='new_loader relative h-full bg-state-900'>
             <TokenMetata setOpenTokenMetaData={setOpenTokenMetaData} />
           </div>
