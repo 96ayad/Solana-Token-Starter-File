@@ -6,6 +6,7 @@ import Head from 'next/head';
 import {
   FeatureView,
   HomeView,
+  OfferView,
   ToolView,
 } from '../views';
 
@@ -41,9 +42,10 @@ const Home: NextPage = (props) => {
         setOpenSendTransaction={setOpenSendTransaction}
         setOpenTokenMetaData={setOpenTokenMetaData}
         />
-{/*
+
         <OfferView />
-        <FaqView /> */}
+
+{/*        <FaqView /> */}
         {/* //DYNAMIC COMPONENT */}
         {/* {openCreateModal && (
           <div className='new_loader relative h-full bg-state-900'>
