@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import {
+  FeatureView,
   HomeView,
   ToolView,
 } from '../views';
@@ -32,7 +33,7 @@ const Home: NextPage = (props) => {
         setOpenSendTransaction={setOpenSendTransaction}
         setOpenTokenMetaData={setOpenTokenMetaData}
         />
-{/* 
+
         <FeatureView 
         setOpenAirdrop={setOpenAirdrop}
         setOpenContact={setOpenContact}
@@ -40,7 +41,7 @@ const Home: NextPage = (props) => {
         setOpenSendTransaction={setOpenSendTransaction}
         setOpenTokenMetaData={setOpenTokenMetaData}
         />
-
+{/*
         <OfferView />
         <FaqView /> */}
         {/* //DYNAMIC COMPONENT */}
