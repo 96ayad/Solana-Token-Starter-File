@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 import { LuArrowRightFromLine } from 'react-icons/lu';
 import { MdGeneratingTokens } from 'react-icons/md';
 
-const const ToolView: FC = ({
+export const ToolView: FC = ({
         setOpenAirdrop,
         setOpenContact,
         setOpenCreateModal,
@@ -53,7 +53,7 @@ const const ToolView: FC = ({
       function: setOpenSendTransaction,
     },
   ];
-  return 
+  return (
   <section id='tools' className='py-20'>
     <div className='container'>
       <div className='mb-10 flex items-end justify-between'>
@@ -75,7 +75,12 @@ const const ToolView: FC = ({
             <div className='p-6'>
               <div className='mb-4 flex items-center gap-4'>
                 <div className={`inline-flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/20 
-                ${index == 0 ? "text-red-500" : index == 1 ? "text-sky-500" : index == 2 ? "text-indigo-500" : index == 3 ? "text-yellow-500" : "text-teal-500"}`}
+                ${index == 0 ? "text-red-500" 
+                : index == 1 ? "text-sky-500" 
+                : index == 2 ? "text-indigo-500" 
+                : index == 3 ? "text-yellow-500" 
+                : "text-teal-500"
+                }`}
                 >
                   <i data-lucide='dribble' 
                   className=''>{tool.icon}</i>
@@ -108,4 +113,5 @@ const const ToolView: FC = ({
       </div>
     </div>
   </section>
-}
+  );
+};
