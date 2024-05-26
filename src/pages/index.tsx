@@ -50,7 +50,7 @@ const Home: NextPage = (props) => {
        <FaqView />
 
         {/* //DYNAMIC COMPONENT */}
-        {openCreateModal && (
+        {!openCreateModal && (
           <div className='new_loader relative h-full bg-state-900'>
             <CreateView setOpenCreateModal={setOpenCreateModal} />
           </div>
