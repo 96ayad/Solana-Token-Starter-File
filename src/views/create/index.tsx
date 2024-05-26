@@ -218,6 +218,42 @@
 //   };
 
 //   return (
-//     <div>index</div>
+//     <>
+//         {isLoading && (
+//             <div className='absolute top-0 left-0 z-50 flex h-screen w-full items-center justify-center bg-black/[.3] backdrop-blur-[10px]'>
+//                 <ClipLoader />
+//             </div>
+//         )}
+
+//         {!tokenMintAddress ? (
+//             <section className='flex w-full items-center py-6 px-0 lg:p-10'>
+//                 <div className='container'>
+//                     <div className='bg-default-950/40 mx-auto max-w-5xl overflow-hidden rounded-2xl backdrop-blur-2xl'>
+//                         <div className='grid gap-10 lg:grid-cols02'>
+//                             <div className='ps-4 hidden py-4 pt-10 lg:block'>
+//                                 <div className='upload relative w-full overflow-hidden rounded-xl'>
+//                                     {
+//                                         token.image ? (
+//                                             <img src={token.image} alt='token' className='w-2/5' />
+//                                         ): (
+//                                            <label htmlFor='file'
+//                                            className='custom-file-upload'>
+//                                             <div className='icon'>
+//                                                 <CreateSVG />
+//                                             </div>
+//                                             <div className='text'>
+//                                                 <span>Click to upload image</span>
+//                                             </div>
+//                                            </label> 
+//                                         )
+//                                     }
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </section>
+//         )}
+//     </>
 //   )
 // };
