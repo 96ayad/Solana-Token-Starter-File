@@ -167,8 +167,8 @@
 //                 url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
 //                 data: formData,
 //                 headers: {
-//                     pinata_api_key: "",
-//                     pinata_secret_api_key:"",
+//                     pinata_api_key: "6668ea235b402194ceba",
+//                     pinata_secret_api_key:"0b71fe595e053c9829ad2bb224d2d7ef33f3d8bb50d2b4da03cbe209dd739920",
 //                     "Content-Type":"multipart/form-data",
 //                 },
 //             });
@@ -203,8 +203,8 @@
 //             url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
 //             data: data,
 //             headers: {
-//                 pinata_api_key: "",
-//                 pinata_secret_api_key:"",
+//                 pinata_api_key: "6668ea235b402194ceba",
+//                 pinata_secret_api_key:"0b71fe595e053c9829ad2bb224d2d7ef33f3d8bb50d2b4da03cbe209dd739920",
 //                 "Content-Type":"application/json",
 //             },
 //         });
