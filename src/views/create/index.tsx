@@ -244,6 +244,7 @@
 //                                             <div className='text'>
 //                                                 <span>Click to upload image</span>
 //                                             </div>
+//                                             <input type='file' id='file' onChange={handleImageChange} />
 //                                            </label> 
 //                                         )
 //                                     }
