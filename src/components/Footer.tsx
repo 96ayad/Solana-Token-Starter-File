@@ -10,7 +10,7 @@ import {
 import { useForm } from '@formspree/react';
 
 export const Footer: FC = () => {
-  const [state, handleSubmit] = useForm("mzbnzpqr");
+  const [state, handleSubmit] = useForm("xyyravzo");
 
   if (state.succeeded) {
     return (
