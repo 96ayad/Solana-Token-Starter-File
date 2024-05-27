@@ -10,7 +10,7 @@ import React, {
 //     createCreateMetadataAccountInstruction,
 //    } from "@metaplex-foundation/mpl-token-metadata";
 import axios from 'axios';
-import Branding from 'components/Branding';
+// import Branding from 'components/Branding';
 import { useNetworkConfiguration } from 'contexts/NetworkConfigurationProvider';
 import { AiOutlineClose } from 'react-icons/ai';
 import { ClipLoader } from 'react-spinners';
@@ -39,9 +39,9 @@ import {
   Transaction,
 } from '@solana/web3.js';
 
+import Branding from '../../components/Branding';
 import CreateSVG from '../../components/SVG/CreateSVG';
 import { notify } from '../../utils/notifications';
-// import Branding from '../../components/Branding';
 import { InputView } from '../index';
 
 export const CreateView:FC = ({ setOpenCreateModal }) => {
@@ -82,6 +82,7 @@ export const CreateView:FC = ({ setOpenCreateModal }) => {
 
         const createMetadataInstruction = createCreateMetadataAccountV3Instruction({
             metadata: PublicKey.findProgramAddressSync([
+                Buffer.from("metadata"),
                 PROGRAM_ID.toBuffer(),
                 mintKeypair.publicKey.toBuffer(),
             ],
@@ -239,7 +240,7 @@ export const CreateView:FC = ({ setOpenCreateModal }) => {
             </div>
         )}
 
-        {tokenMintAddress ? (
+        {!tokenMintAddress ? (
             <section className='flex w-full items-center py-6 px-0 lg:h-screen lg:p-10'>
                 <div className='container'>
                     <div className='bg-default-950/40 mx-auto max-w-5xl overflow-hidden rounded-2xl backdrop-blur-2xl'>
@@ -343,6 +344,7 @@ export const CreateView:FC = ({ setOpenCreateModal }) => {
             <section className='flex w-full items-center py-6 px-0 lg:h-screen lg:p-10'>
                 <div className='container'>
                     <div className='bg-default-950/40 mx-auto max-w-5xl overflow-hidden rounded-2xl backdrop-blur-2xl'>
+                        <div className='grid gap-10 lg:grid-cols-2'>
                         {/* //FIRST */}
                         <Branding 
                         image="auth-img"
@@ -396,8 +398,25 @@ export const CreateView:FC = ({ setOpenCreateModal }) => {
                                             </span>
                                         </a>
                                     </div>
+
+                                    <div>
+                                    <div className='text-center'>
+                                        <ul className='flex flex-wrap items-center justify-center gap-2'>
+                                            <li>
+                                                <a onClick={() => setOpenCreateModal(false)}
+                                                className='group inline-flex h-10 w-10 items-center rounded-lg bg-white/20 backdrop-blur-2xl transition-all duration-500 hover:bg-blue-600/60'
+                                                >
+                                                    <i className='text-2xl text-white group-hover:text-white'>
+                                                        <AiOutlineClose />
+                                                    </i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>

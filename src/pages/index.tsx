@@ -51,7 +51,7 @@ const Home: NextPage = (props) => {
 
         {/* //DYNAMIC COMPONENT */}
 
-        {!openCreateModal && (
+        {openCreateModal && (
           <div className='new_loader relative h-full bg-slate-900'>
             <CreateView setOpenCreateModal={setOpenCreateModal} />
           </div>
