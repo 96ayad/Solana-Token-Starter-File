@@ -9,6 +9,7 @@ import {
   FeatureView,
   HomeView,
   OfferView,
+  TokenMetadata,
   ToolView,
 } from '../views';
 
@@ -57,13 +58,13 @@ const Home: NextPage = (props) => {
           </div>
         )}
 
-        {/* {openTokenMetaData && (
-          <div className='new_loader relative h-full bg-state-900'>
-            <TokenMetata setOpenTokenMetaData={setOpenTokenMetaData} />
+        {openTokenMetaData && (
+          <div className='new_loader relative h-full bg-slate-900'>
+            <TokenMetadata setOpenTokenMetaData={setOpenTokenMetaData} />
           </div>
         )}
 
-        {openContact && (
+        {/* {openContact && (
           <div className='new_loader relative h-full bg-state-900'>
             <ContactView setOpenContact={setOpenContact} />
           </div>

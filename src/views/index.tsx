@@ -7,5 +7,5 @@ export { AirdropView } from './airdrop';
 export { DonateView } from './donate';
 export { CreateView } from './create';
 export { InputView } from './input';
-export { TokenMetata } from './tokenMetadata';
+export { TokenMetadata } from './tokenMetadata';
 export { ContactView } from './conatct';
