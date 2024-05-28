@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import {
+  AirdropView,
   ContactView,
   CreateView,
   FaqView,
@@ -71,13 +72,13 @@ const Home: NextPage = (props) => {
           </div>
         )}
 
-        {/* {openAirdrop && (
+        {openAirdrop && (
           <div className='new_loader relative h-full bg-slate-900'>
             <AirdropView setOpenAirdrop={setOpenAirdrop} />
           </div>
         )}
 
-        {openSendTransaction && (
+        {/* {openSendTransaction && (
           <div className='new_loader relative h-full bg-slate-900'>
             <DonateView setOpenSendTransaction={setOpenSendTransaction} />
           </div>
