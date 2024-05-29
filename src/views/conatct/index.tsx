@@ -14,11 +14,12 @@ export const ContactView: FC = ({ setOpenContact }) => {
   //FORM
   const [state, handleSubmit] = useForm("xyyravzo");
   if (state.succeeded) {
+    setOpenContact(false);
     notify({
       type: "success",
       message: "Thanks for sending your message, will get back to you",
     });
-    setOpenContact(false);
+    // setOpenContact(false);
   }
 
   //COMPONENT
@@ -82,7 +83,7 @@ const CloseModal = () => (
                                     placeholder='message'
                                     ></textarea>
                                     <ValidationError prefix='Message' field='message' errors={state.errors} />
-                                  </form>
+                                  
                                         <div className='mb-6 text-center'>
                                           <button type='submit'
                                           disabled={state.submitting}
@@ -92,7 +93,7 @@ const CloseModal = () => (
                                           </button>
                                           <CloseModal />
                                         </div>
-                                    
+                                        </form>
                                 </div>
                             </div>
                         </div>
